@@ -83,6 +83,17 @@ jobs:
           # 0. KernelSU (Hooks VFS manuales sin Kprobes)
           echo "CONFIG_KSU=y" >> $DEFCONFIG
           echo "CONFIG_KSU_DEBUG=n" >> $DEFCONFIG
+          echo "CONFIG_MACVLAN=y" >> $DEFCONFIG
+          echo "CONFIG_IPV6=y" >> $DEFCONFIG
+          echo "CONFIG_IP6_NF_IPTABLES=y" >> $DEFCONFIG
+          echo "CONFIG_IP6_NF_NAT=y" >> $DEFCONFIG
+          echo "CONFIG_CFS_BANDWIDTH=y" >> $DEFCONFIG
+          echo "CONFIG_RT_GROUP_SCHED=y" >> $DEFCONFIG
+          echo "CONFIG_CGROUP_PIDS=y" >> $DEFCONFIG
+          echo "CONFIG_DEVTMPFS=y" >> $DEFCONFIG
+          echo "CONFIG_DEVTMPFS_MOUNT=y" >> $DEFCONFIG
+          echo "CONFIG_POSIX_MQUEUE=y" >> $DEFCONFIG
+          echo "CONFIG_POSIX_MQUEUE_SYSCTL=y" >> $DEFCONFIG
           
           # 1. Comunicacion IPC y aislamiento de Namespaces (NetHunter Chroot, Docker, Metasploit)
           echo "CONFIG_SYSVIPC=y" >> $DEFCONFIG
